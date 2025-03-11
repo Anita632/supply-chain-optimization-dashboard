@@ -3,7 +3,7 @@ import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
 from io import StringIO
-from scipy.spatial import distance_matrix
+from scipy.spatial import distance_matrix # type: ignore
 import numpy as np
 from PIL import Image
 
