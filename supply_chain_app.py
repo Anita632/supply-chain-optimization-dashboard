@@ -8,7 +8,7 @@ import streamlit as st
 @st.cache_data
 def load_data():
     # URL to the CSV file in your GitHub repository
-    url = 'https://raw.githubusercontent.com/Anita632/supply-chain-optomization-dashboard/main/cleaned_supply_chain_data.csv'
+    url = 'https://raw.githubusercontent.com/Anita632/supply-chain-optimization-dashboard/refs/heads/main/cleaned_supply_chain_data.csv'
     return pd.read_csv(url)
 
 data = load_data()
