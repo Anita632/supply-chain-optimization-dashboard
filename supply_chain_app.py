@@ -2,8 +2,14 @@ import streamlit as st
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
-import pandas as pd
-import streamlit as st
+from io import StringIO
+from scipy.spatial import distance_matrix
+import numpy as np
+from PIL import Image
+
+# MUST BE THE FIRST Streamlit COMMAND
+st.set_page_config(page_title="Supply Chain Optimization Dashboard", layout="wide")
+
 
 @st.cache_data
 def load_data():
@@ -15,7 +21,6 @@ data = load_data()
 st.write(data.head())
 
 
-st.set_page_config(page_title="Supply Chain Optimization Dashboard", layout="wide")
 
 st.title("Supply Chain Optimization Dashboard")
 
