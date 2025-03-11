@@ -2,6 +2,18 @@ import streamlit as st
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
+import pandas as pd
+import streamlit as st
+
+@st.cache_data
+def load_data():
+    # URL to the CSV file in your GitHub repository
+    url = 'https://raw.githubusercontent.com/Anita632/supply-chain-optomization-dashboard/main/cleaned_supply_chain_data.csv'
+    return pd.read_csv(url)
+
+data = load_data()
+st.write(data.head())
+
 
 st.set_page_config(page_title="Supply Chain Optimization Dashboard", layout="wide")
 
